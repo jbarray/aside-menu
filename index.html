@@ -17,6 +17,9 @@
             display: inline-block;
             text-align: center;
             padding: 5px;
+            animation: fade-out;/*动画名称*/
+            animation-duration: 1.5s;/*动画持续时间*/
+            -webkit-animation:fade-out 1.5s;/*针对webkit内核*/
         }
         .row {
             text-align: center;
@@ -42,6 +45,37 @@
             right: 70px;
             bottom: 1px;
          }
+        #goToTop{
+            /*display: none;*/
+        }
+        .hidden{
+            height: 60px;
+            background-color: dimgrey;
+        }
+        span{
+            /*padding:10px 0 10px 0;*/
+            line-height: 60px;
+        }
+        /*淡入效果*/
+        @keyframes fade-in {
+            0% {opacity: 0;}/*初始状态 透明度为0*/
+            50% {opacity: .5;}/*过渡状态 透明度为0*/
+            100% {opacity: 1;}/*结束状态 透明度为1*/
+        }
+        @-webkit-keyframes fade-in {/*针对webkit内核*/
+            0% {opacity: 0;}
+            40% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        .hidden{
+            animation: fade-in;/*动画名称*/
+            animation-duration: 1.5s;/*动画持续时间*/
+            -webkit-animation:fade-in 1.5s;/*针对webkit内核*/
+            display: none;
+            text-align: center;
+            padding: 5px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -54,6 +88,57 @@
         <li>1行</li>
         <li>1行</li>
         <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li>1行</li>
+        <li id="order" style="color: red;">1行</li>
         <li>1行</li>
         <li>1行</li>
         <li>1行</li>
@@ -120,9 +205,13 @@
     </div>
     <div class="icon">
         <div class="row"><img src="img/wechat.png"></div>
+        <div class="hidden"><span>公众账号</span></div>
         <div class="row"><img src="img/massage.png"></div>
+        <div class="hidden"><span>意见反馈</span></div>
         <div class="row"><img src="img/phone.png"></div>
-        <div class="row"><img src="img/go_to_top.png"></div>
+        <div class="hidden"><span>下载app</span></div>
+        <div class="row" id="goToTop"><img src="img/go_to_top.png"></div>
+        <div class="hidden"><span><a href="#firstContent">返回顶部</a></span></div>
     </div>
 </div>
 <script src="aside_menu.js"></script>
