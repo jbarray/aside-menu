@@ -6,25 +6,22 @@ var arrIcon=document.getElementsByClassName('row');
 
 //goToTop相关操作
 //到达某个位置,goToTop图标消失
-function toTop(){
-    if(check){
-        document.getElementById('goToTop').style.display='none';
-
-    }
-    else{
+window.onscroll=function(){
+    var height = document.body.scrollTop||document.documentElement.scrollTop;
+    if(height>=500){
+        document.getElementById('goToTop').style.display='block';
         arrIcon[3].onclick=function(){
             document.getElementById('goToTop').style.display='none';
-        }
+        };
     }
-}
-function check() {
-    setInterval(function () {
-        var height = document.body.scrollTop;
-        var orderHeight = document.getElementById('order').offsetTop;
-        return (height < orderHeight);
-    }, 20)
-}
-toTop();
+    else{
+        document.getElementById('goToTop').style.display='none';
+    }
+};
+// function check() {
+//     var orderHeight = document.getElementById('order').offsetTop;
+//     return (height > orderHeight);
+// }
 //鼠标放置在图标上,图标消失,出现文字
 function change(){
     font[0].onmouseout=function(){
