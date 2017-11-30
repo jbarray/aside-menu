@@ -25,6 +25,7 @@
             text-align: center;
             padding:5px;
             margin-bottom: 1px;
+            height: 60px;
             background-color: lightgrey;
         }
         #to-phone-img img{
@@ -56,15 +57,19 @@
             /*padding:10px 0 10px 0;*/
             line-height: 60px;
         }
+        span a{
+            text-decoration: none;
+            color: black;
+        }
         /*淡入效果*/
         @keyframes fade-in {
             0% {opacity: 0;}/*初始状态 透明度为0*/
-            50% {opacity: .5;}/*过渡状态 透明度为0*/
+            40% {opacity: .5;}/*过渡状态 透明度为0*/
             100% {opacity: 1;}/*结束状态 透明度为1*/
         }
         @-webkit-keyframes fade-in {/*针对webkit内核*/
             0% {opacity: 0;}
-            40% {opacity: 0;}
+            40% {opacity: .5;}
             100% {opacity: 1;}
         }
         .hidden{
